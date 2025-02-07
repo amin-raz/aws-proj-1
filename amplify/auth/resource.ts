@@ -9,7 +9,7 @@ export const auth = defineAuth({
      userInvitation: {
        emailSubject: "Welcome to my app!",
        emailBody: (user, code) =>
-         "We're so excited to have you on board ${user()}! Here's your code: ${code()}",
+         `We're so excited to have you on board ${user()}! Here's your code: ${code()}`,
      },
    },
   },
