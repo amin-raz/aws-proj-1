@@ -20,36 +20,9 @@ export default function App() {
 
   const { signOut } = useAuthenticator();
   
-  function listTodos() {
-    client.models.Todo.observeQuery().subscribe({
-      next: (data) => setTodos([...data.items]),
-    });
-  }
-
-  useEffect(() => {
-    listTodos();
-  }, []);
-
-  function createTodo() {
-    client.models.Todo.create({
-      content: window.prompt("Todo content"),
-    });
-  }
-
-  function deleteTodo(id: string) {
-    client.models.Todo.delete({ id })
-  }
-  
   return (
     <main>
-      <h1>My todos</h1>
-      <button onClick={createTodo}>+ new</button>
-      <ul>
-        {todos.map((todo) => <li
-            onClick={() => deleteTodo(todo.id)}
-            key={todo.id}>{todo.content}
-          </li>)}
-      </ul>
+      <h1 className = "text-3x1 font-bold underline">Test</h1>
       <button onClick={signOut}>Sign out</button>
     </main>
   );
