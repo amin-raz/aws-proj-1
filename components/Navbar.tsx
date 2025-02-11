@@ -28,7 +28,7 @@ const NavBar = () => {
               <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-xl py-2">
                 <div className="px-4 py-2 text-sm text-gray-700 border-b">
                   <div className="font-semibold">Username: {user?.username}</div>
-                  <div className="text-xs">{user?.attributes?.email}</div>
+                  <div className="text-xs">{user?.email}</div>
                 </div>
                 <button 
                   onClick={() => {
