@@ -14,7 +14,6 @@ Amplify.configure(outputs);
 const client = generateClient<Schema>();
 
 export default function HomePage() {
-  const { signOut } = useAuthenticator();
   
   return (
     <div className="min-h-screen bg-gray-50">
@@ -40,6 +39,12 @@ export default function HomePage() {
             className="px-4 py-2 bg-green-500 text-white rounded-lg shadow-md hover:bg-green-600"
           >
             Test Button
+          </button>
+          <button 
+            className="px-4 py-2 bg-red-500 text-white rounded-lg shadow-md hover:bg-green-600"
+            onClick={signOut}
+          >
+            Sign Out
           </button>
         </div>
       </main>
