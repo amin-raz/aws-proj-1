@@ -237,10 +237,23 @@ const formFields = {
   },
 };
 
-export default function Layout() {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-      <Authenticator formFields={formFields} components={components}>
-        {({ signOut }) => <button onClick={signOut}>Sign out</button>}
-      </Authenticator>
-    );
-  }
+    <html lang="en">
+      <body>
+        <Authenticator formFields={formFields} components={components}>
+          {() => (
+            <>
+              <NavBar />
+              {children}
+            </>
+          )}
+        </Authenticator>
+      </body>
+    </html>
+  );
+}
