@@ -1,20 +1,14 @@
 "use client";
 
-// https://docs.amplify.aws/nextjs/start/quickstart/nextjs-app-router-client-components/ 
 import { useAuthenticator } from "@aws-amplify/ui-react";
 import { useState, useEffect } from "react";
 import { generateClient } from "aws-amplify/data";
 import type { Schema } from "@/amplify/data/resource";
 import '../styles/tailwind.css';
-import { Amplify } from "aws-amplify";
-import outputs from "@/amplify_outputs.json";
-
-Amplify.configure(outputs);
 
 const client = generateClient<Schema>();
 
 export default function HomePage() {
-  
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
@@ -39,12 +33,6 @@ export default function HomePage() {
             className="px-4 py-2 bg-green-500 text-white rounded-lg shadow-md hover:bg-green-600"
           >
             Test Button
-          </button>
-          <button 
-            className="px-4 py-2 bg-red-500 text-white rounded-lg shadow-md hover:bg-green-600"
-            onClick={signOut}
-          >
-            Sign Out
           </button>
         </div>
       </main>
