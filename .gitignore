@@ -39,3 +39,13 @@ next-env.d.ts
 .amplify
 amplify_outputs*
 amplifyconfiguration*
+aws-exports.js
+.graphql-config.yml
+
+# AWS
+.aws
+
+# Local environment files
+.env
+.env.local
+.env.*.local
