@@ -1,4 +1,7 @@
 import Link from "next/link";
+import { useAuthenticator } from "@aws-amplify/ui-react";
+
+const { signOut } = useAuthenticator();
 
 const NavBar = () => {
   return (
