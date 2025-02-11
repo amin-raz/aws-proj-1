@@ -41,12 +41,6 @@ export default function HomePage() {
           >
             Test Button
           </button>
-          <button 
-            className="px-4 py-2 bg-red-500 text-white rounded-lg shadow-md hover:bg-green-600"
-            onClick={signOut}
-          >
-            Sign Out
-          </button>
         </div>
       </main>
 
