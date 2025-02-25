@@ -1,3 +1,2 @@
-# Will be migrating another rep to here
-Plan:
+# Plan:
 Website for a convert vid to gif Discord bot
